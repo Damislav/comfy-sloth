@@ -4,11 +4,10 @@ import {
   COUNT_CART_TOTALS,
   REMOVE_CART_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
-} from '../actions'
+} from "../actions";
 
 const cart_reducer = (state, action) => {
-  return state
-  throw new Error(`No Matching "${action.type}" - action type`)
-}
+  return state;
+};
 
-export default cart_reducer
+export default cart_reducer;

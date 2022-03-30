@@ -24,20 +24,20 @@ function App() {
           </Route>
           <Route exact path="/products">
             <Products />
-          </Route>{" "}
+          </Route>
           <Route exact path="/products/:id" children={<SingleProduct />} />
           <Route exact path="/about">
             <About />
-          </Route>{" "}
+          </Route>
           <Route exact path="/cart">
             <Cart />
-          </Route>{" "}
+          </Route>
           <Route exact path="/checkout">
             <Checkout />
-          </Route>{" "}
+          </Route>
           <Route exact path="/private">
             <PrivateRoute />
-          </Route>{" "}
+          </Route>
           <Route path="*">
             <Error />
           </Route>
