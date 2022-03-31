@@ -67,10 +67,12 @@ const filter_reducer = (state, action) => {
     const { all_products } = state;
     const { text, category, company, color, price, shipping } = state.filters;
 
+    // make temp arr
     let tempProducts = [...all_products];
     // filtering
     // text
     if (text) {
+      // if filter its empty get default tempproducts
       tempProducts = tempProducts.filter((product) => {
         return product.name.toLowerCase().startsWith(text);
       });
@@ -81,7 +83,6 @@ const filter_reducer = (state, action) => {
         (product) => product.category === category
       );
     }
-
     // company
     if (company !== "all") {
       tempProducts = tempProducts.filter(
