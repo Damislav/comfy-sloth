@@ -7,6 +7,7 @@ import { FilterProvider } from "./context/filter_context";
 import { CartProvider } from "./context/cart_context";
 import { UserProvider } from "./context/user_context";
 import { Auth0Provider, User } from "@auth0/auth0-react";
+require("dotenv").config();
 
 if (module.hot) {
   module.hot.accept();
@@ -14,8 +15,8 @@ if (module.hot) {
 
 ReactDOM.render(
   <Auth0Provider
-    domain={process.env.domain}
-    clientId={process.env.clientId}
+    domain={process.env.REACT_APP_domain}
+    clientId={process.env.REACT_APP_clientId}
     redirectUri={window.location.origin}
     cacheLocation="localstorage"
   >

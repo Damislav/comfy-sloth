@@ -11,10 +11,11 @@ import {
   Cart,
   Checkout,
   PrivateRoute,
+  AuthWrapper,
 } from "./pages/index";
 function App() {
   return (
-    <>
+    <AuthWrapper>
       <Router>
         <Navbar />
         <Sidebar />
@@ -32,20 +33,18 @@ function App() {
           <Route exact path="/cart">
             <Cart />
           </Route>
-          <Route exact path="/checkout">
+          <PrivateRoute exact path="/checkout">
             <Checkout />
-          </Route>
-          <Route exact path="/private">
-            <PrivateRoute />
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <Error />
           </Route>
         </Switch>
       </Router>
-      <Footer />
-    </>
+      <Footer />{" "}
+    </AuthWrapper>
   );
 }
+
 
 export default App;
