@@ -16,7 +16,7 @@ const CheckoutPage = () => {
             <h3> your cart is empty</h3>{" "}
             <Link className="btn" to="/products">
               fill it
-          </Link>
+            </Link>
           </div>
         ) : (
           <StripeCheckout />

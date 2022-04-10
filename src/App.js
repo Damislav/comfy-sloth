@@ -1,5 +1,4 @@
 import React from "react";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Navbar, Sidebar, Footer } from "./components";
 import {
@@ -13,6 +12,7 @@ import {
   PrivateRoute,
   AuthWrapper,
 } from "./pages/index";
+
 function App() {
   return (
     <AuthWrapper>
@@ -41,7 +41,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      <Footer />{" "}
+      <Footer />
     </AuthWrapper>
   );
 }
