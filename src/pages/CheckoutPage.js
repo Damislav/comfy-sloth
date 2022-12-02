@@ -13,7 +13,7 @@ const CheckoutPage = () => {
       <Wrapper className="page">
         {cart.length < 1 ? (
           <div className="empty">
-            <h3> your cart is empty</h3>{" "}
+            <h3> your cart is empty</h3>
             <Link className="btn" to="/products">
               fill it
             </Link>
@@ -22,12 +22,16 @@ const CheckoutPage = () => {
           <StripeCheckout />
         )}
         <h1>Checkout</h1>
-      </Wrapper>
+      </Wrapper>{" "}
     </main>
   );
 };
 const Wrapper = styled.section`
+  section {
+    padding-top: 3rem;
+  }
   form {
+    margin: 0 auto;
     width: 30vw;
     align-self: center;
     box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),

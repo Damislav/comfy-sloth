@@ -200,5 +200,10 @@ p {
   padding: 5rem 0;
 }
 .page {
+  padding-top: 3rem;
+  text-align: center;
+  min-height: calc(100vh - (20vh + 10rem));
+}
+.cart {
   min-height: calc(100vh - (20vh + 10rem));
 }
