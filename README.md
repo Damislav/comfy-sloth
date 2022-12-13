@@ -1,3 +1,7 @@
+
+
+Ecommerce furniture shop with stripe and authentication
+
 ## Notes
 
 #### Older React Version
